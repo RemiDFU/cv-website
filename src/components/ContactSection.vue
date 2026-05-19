@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="contact">
-    <div class="container">
+    <div ref="revealEl" class="container reveal">
       <p class="section-label">05 // contact</p>
       <h2 class="section-title">Get In Touch</h2>
       <div class="section-divider"></div>
@@ -116,6 +116,10 @@
 
 <script setup>
 import { reactive, ref } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const revealEl = ref(null)
+useScrollReveal(revealEl)
 
 const form = reactive({ name: '', email: '', message: '' })
 const errors = reactive({ name: '', email: '', message: '' })

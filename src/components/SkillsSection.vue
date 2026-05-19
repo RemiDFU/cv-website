@@ -1,6 +1,6 @@
 <template>
   <section id="skills" class="skills">
-    <div class="container">
+    <div ref="revealEl" class="container reveal">
       <p class="section-label">03 // skills</p>
       <h2 class="section-title">Skills</h2>
       <div class="section-divider"></div>
@@ -20,6 +20,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const revealEl = ref(null)
+useScrollReveal(revealEl)
+
 const skillGroups = [
   {
     title: 'Languages',

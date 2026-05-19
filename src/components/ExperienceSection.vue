@@ -1,6 +1,6 @@
 <template>
   <section id="experience" class="experience">
-    <div class="container">
+    <div ref="revealEl" class="container reveal">
       <p class="section-label">02 // experience</p>
       <h2 class="section-title">Work Experience</h2>
       <div class="section-divider"></div>
@@ -42,6 +42,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const revealEl = ref(null)
+useScrollReveal(revealEl)
+
 const jobs = [
   {
     role:     'Warehouse Operator',

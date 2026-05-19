@@ -1,6 +1,6 @@
 <template>
   <section id="education" class="education">
-    <div class="container">
+    <div ref="revealEl" class="container reveal">
       <p class="section-label">04 // education</p>
       <h2 class="section-title">Education</h2>
       <div class="section-divider"></div>
@@ -39,6 +39,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const revealEl = ref(null)
+useScrollReveal(revealEl)
+
 const education = [
   {
     type:     'Master of Science',

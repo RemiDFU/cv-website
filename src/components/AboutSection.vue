@@ -1,6 +1,6 @@
 <template>
   <section id="about" class="about">
-    <div class="container">
+    <div ref="revealEl" class="container reveal">
       <p class="section-label">01 // about</p>
       <h2 class="section-title">About Me</h2>
       <div class="section-divider"></div>
@@ -53,6 +53,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+import { useScrollReveal } from '../composables/useScrollReveal.js'
+
+const revealEl = ref(null)
+useScrollReveal(revealEl)
+
 const facts = [
   { label: 'Location',    value: 'Adelaide, SA 5000' },
   { label: 'Visa',        value: 'Working Holiday 417' },

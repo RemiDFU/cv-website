@@ -1,0 +1,64 @@
+name: Docker — Smoke test
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  docker-smoke:
+    name: Build image & smoke test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t cv-website:ci .
+
+      - name: Start container
+        run: docker run -d --name cv-smoke -p 8080:80 cv-website:ci
+
+      - name: Wait for nginx to be ready
+        run: |
+          for i in $(seq 1 10); do
+            if curl -sf http://localhost:8080 > /dev/null; then
+              echo "Site is up"
+              exit 0
+            fi
+            echo "Attempt $i — waiting..."
+            sleep 2
+          done
+          echo "Site did not respond in time" && exit 1
+
+      - name: Check HTTP 200 on root
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:8080)
+          echo "HTTP status: $STATUS"
+          [ "$STATUS" = "200" ]
+
+      - name: Check SPA fallback (unknown route → 200)
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" http://localhost:8080/some-unknown-route)
+          echo "SPA fallback status: $STATUS"
+          [ "$STATUS" = "200" ]
+
+      - name: Stop & remove container
+        if: always()
+        run: docker stop cv-smoke && docker rm cv-smoke
+
+      # ── Registry publish (TODO) ──────────────────────────────────────
+      # Uncomment and configure secrets to push to a registry:
+      #
+      # - name: Log in to registry
+      #   uses: docker/login-action@v3
+      #   with:
+      #     registry: ghcr.io
+      #     username: ${{ github.actor }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
+      #
+      # - name: Push image
+      #   run: |
+      #     docker tag cv-website:ci ghcr.io/${{ github.repository }}:latest
+      #     docker push ghcr.io/${{ github.repository }}:latest
+      # ─────────────────────────────────────────────────────────────────

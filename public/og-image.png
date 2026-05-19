@@ -1,0 +1,9 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'>
+  <rect width='1200' height='630' fill='#0a0a0f'/>
+  <text x='600' y='260' font-family='monospace' font-size='64' font-weight='bold'
+        fill='#00e5ff' text-anchor='middle'>Remi Dufau</text>
+  <text x='600' y='340' font-family='monospace' font-size='28'
+        fill='#e8e8f0' text-anchor='middle'>Site Reliability Engineer</text>
+  <text x='600' y='400' font-family='monospace' font-size='20'
+        fill='#8888aa' text-anchor='middle'>Adelaide, SA · remi.dufau.au@gmail.com</text>
+</svg>

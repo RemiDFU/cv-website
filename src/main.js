@@ -8,11 +8,10 @@ import './assets/styles/base.css'
 import './assets/styles/animations.css'
 
 const savedLocale = localStorage.getItem('cv-locale')
-const browserLocale = navigator.language.startsWith('fr') ? 'fr' : 'en'
 
 const i18n = createI18n({
   legacy: false,
-  locale: savedLocale || browserLocale,
+  locale: savedLocale || 'en',
   fallbackLocale: 'en',
   messages: { en, fr },
 })

@@ -77,3 +77,42 @@ h1, h2, h3, h4 {
   background: var(--color-accent);
   margin-bottom: var(--space-6);
 }
+
+/* ── Buttons (global — used in Hero, Contact, etc.) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: #0a0a0f;
+}
+
+.btn--primary:hover {
+  filter: brightness(1.15);
+  text-decoration: none;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn--ghost:hover {
+  background: var(--color-accent-dim);
+  text-decoration: none;
+}

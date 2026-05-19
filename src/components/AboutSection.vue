@@ -13,7 +13,7 @@
 
           <div class="about__links">
             <a
-              href="https://www.linkedin.com/in/rémi-dufau8995a116b/"
+              href="https://www.linkedin.com/in/r%C3%A9mi-dufau-8995a116b/"
               target="_blank"
               rel="noopener noreferrer"
               class="about__link"

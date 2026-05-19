@@ -157,50 +157,13 @@ const { t } = useI18n()
   color: var(--color-text-muted);
 }
 
-/* ── Buttons ── */
+/* ── CTAs ── */
 .hero__ctas {
   display: flex;
   gap: var(--space-4);
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: var(--space-7);
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--radius-md);
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: all var(--transition);
-}
-
-.btn--primary {
-  background: var(--color-accent);
-  color: #0a0a0f;
-}
-
-.btn--primary:hover {
-  filter: brightness(1.15);
-  text-decoration: none;
-}
-
-.btn--ghost {
-  background: transparent;
-  color: var(--color-accent);
-  border: 1px solid var(--color-accent);
-}
-
-.btn--ghost:hover {
-  background: var(--color-accent-dim);
-  text-decoration: none;
 }
 
 /* ── Meta badges ── */

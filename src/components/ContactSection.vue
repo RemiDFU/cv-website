@@ -20,7 +20,7 @@
               <span>+61 493 982 802</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/rémi-dufau8995a116b/"
+              href="https://www.linkedin.com/in/r%C3%A9mi-dufau-8995a116b/"
               target="_blank"
               rel="noopener noreferrer"
               class="contact__detail"
@@ -117,7 +117,7 @@ import { useScrollReveal } from '../composables/useScrollReveal.js'
 
 const { t } = useI18n()
 const revealEl = ref(null)
-useScrollReveal(revealEl)
+useScrollReveal(revealEl, { threshold: 0.05, rootMargin: '0px' })
 
 const form = reactive({ name: '', email: '', message: '' })
 const errors = reactive({ name: '', email: '', message: '' })

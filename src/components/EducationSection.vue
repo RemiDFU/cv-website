@@ -1,12 +1,12 @@
 <template>
   <section id="education" class="education">
     <div ref="revealEl" class="container reveal">
-      <p class="section-label">04 // education</p>
-      <h2 class="section-title">Education</h2>
+      <p class="section-label">{{ t('education.label') }}</p>
+      <h2 class="section-title">{{ t('education.title') }}</h2>
       <div class="section-divider"></div>
 
       <div class="education__grid">
-        <div v-for="item in education" :key="item.degree" class="education__card">
+        <div v-for="item in degrees" :key="item.field" class="education__card">
           <div class="education__badge">
             <span class="education__badge-icon" aria-hidden="true">🎓</span>
           </div>
@@ -23,13 +23,13 @@
       </div>
 
       <div class="certifications">
-        <h3 class="certifications__title">Certifications</h3>
+        <h3 class="certifications__title">{{ t('education.certifications_title') }}</h3>
         <div class="certifications__list">
           <div v-for="cert in certifications" :key="cert.name" class="certifications__item">
             <span class="certifications__check" aria-hidden="true">✓</span>
             <div>
               <p class="certifications__name">{{ cert.name }}</p>
-              <p class="certifications__issued">Issued {{ cert.issued }}</p>
+              <p class="certifications__issued">{{ t('education.issued') }} {{ cert.issued }}</p>
             </div>
           </div>
         </div>
@@ -39,42 +39,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
+const { t, tm } = useI18n()
 const revealEl = ref(null)
 useScrollReveal(revealEl)
 
-const education = [
-  {
-    type:     'Master of Science',
-    field:    'Engineering in Computer Science',
-    school:   'Conservatoire National Des Arts Et Métiers',
-    location: 'Toulouse, France',
-    year:     '2023',
-  },
-  {
-    type:     'Bachelor of Science',
-    field:    'Computer Science',
-    school:   'IPST-CNAM Toulouse INP',
-    location: 'Toulouse, France',
-    year:     '2021',
-  },
-  {
-    type:     'Associate Degree',
-    field:    'Computer Science',
-    school:   'Université Toulouse III Paul Sabatier',
-    location: 'Toulouse, France',
-    year:     '2020',
-  },
-]
-
-const certifications = [
-  { name: 'TOEIC Score 975/990',                            issued: 'Aug 2023' },
-  { name: 'White Card CPCWHS1001',                          issued: 'Nov 2025' },
-  { name: 'Provide First Aid & CPR HLTAID011',              issued: 'Nov 2025' },
-  { name: 'Forklift Licence TLILIC0003',                    issued: 'Jan 2026' },
-]
+const degrees        = computed(() => tm('education.degrees'))
+const certifications = computed(() => tm('education.certifications'))
 </script>
 
 <style scoped>

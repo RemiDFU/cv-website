@@ -1,29 +1,15 @@
 <template>
   <section id="about" class="about">
     <div ref="revealEl" class="container reveal">
-      <p class="section-label">01 // about</p>
-      <h2 class="section-title">About Me</h2>
+      <p class="section-label">{{ t('about.label') }}</p>
+      <h2 class="section-title">{{ t('about.title') }}</h2>
       <div class="section-divider"></div>
 
       <div class="about__grid">
         <div class="about__text">
-          <p>
-            I'm a software engineer with five years of hands-on experience in backend
-            development, SaaS platform monitoring, and site reliability engineering —
-            primarily within the retail and e-commerce space.
-          </p>
-          <p>
-            At Onestock I grew from intern to SRE, working across an Order Management
-            System used by major European retailers. I built and maintained RESTful APIs,
-            refactored legacy code, automated validation tooling, and developed monitoring
-            solutions that kept production reliable for thousands of concurrent users.
-          </p>
-          <p>
-            I thrive in agile, collaborative environments and enjoy the intersection of
-            engineering rigour and practical problem-solving. I'm now based in Adelaide on
-            a Working Holiday Visa (subclass 417) and actively looking for my next
-            challenge in South Australia.
-          </p>
+          <p>{{ t('about.p1') }}</p>
+          <p>{{ t('about.p2') }}</p>
+          <p>{{ t('about.p3') }}</p>
 
           <div class="about__links">
             <a
@@ -31,13 +17,13 @@
               target="_blank"
               rel="noopener noreferrer"
               class="about__link"
-            >LinkedIn ↗</a>
+            >{{ t('about.linkedin') }}</a>
             <a
               href="https://github.com/RemiDFU"
               target="_blank"
               rel="noopener noreferrer"
               class="about__link"
-            >GitHub ↗</a>
+            >{{ t('about.github') }}</a>
           </div>
         </div>
 
@@ -53,20 +39,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
+const { t, tm } = useI18n()
 const revealEl = ref(null)
 useScrollReveal(revealEl)
 
-const facts = [
-  { label: 'Location',    value: 'Adelaide, SA 5000' },
-  { label: 'Visa',        value: 'Working Holiday 417' },
-  { label: 'Experience',  value: '5+ years' },
-  { label: 'Languages',   value: 'French (native) · English C1' },
-  { label: 'TOEIC',       value: '975 / 990' },
-  { label: 'Interests',   value: 'Tech · Sports · Reading · History' },
-]
+const facts = computed(() => tm('about.facts'))
 </script>
 
 <style scoped>

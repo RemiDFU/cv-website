@@ -1,8 +1,8 @@
 <template>
   <section id="experience" class="experience">
     <div ref="revealEl" class="container reveal">
-      <p class="section-label">02 // experience</p>
-      <h2 class="section-title">Work Experience</h2>
+      <p class="section-label">{{ t('experience.label') }}</p>
+      <h2 class="section-title">{{ t('experience.title') }}</h2>
       <div class="section-divider"></div>
 
       <div class="timeline">
@@ -10,7 +10,7 @@
           v-for="(job, index) in jobs"
           :key="index"
           class="timeline__item"
-          :class="{ 'timeline__item--featured': job.featured }"
+          :class="{ 'timeline__item--featured': featuredIndices.has(index) }"
         >
           <div class="timeline__marker" aria-hidden="true">
             <div class="timeline__dot"></div>
@@ -42,89 +42,16 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
+const { t, tm } = useI18n()
 const revealEl = ref(null)
 useScrollReveal(revealEl)
 
-const jobs = [
-  {
-    role:     'Warehouse Operator',
-    company:  'Torresan Estate',
-    location: 'Woodside, SA',
-    period:   'Jan 2026 – Present',
-    featured: false,
-    bullets: [
-      'Inventory tracking using a Warehouse Management System (WMS).',
-      'Forklift operations and heavy machinery handling.',
-      'Applied WHS legislation to maintain a safe working environment.',
-    ],
-  },
-  {
-    role:     'Site Reliability Engineer',
-    company:  'Onestock',
-    location: 'Toulouse, France',
-    period:   'Nov 2023 – Jul 2025',
-    featured: true,
-    bullets: [
-      'Monitored the integration layer of a large-scale SaaS e-commerce (OMS) solution.',
-      'Developed and implemented monitoring solutions to improve system reliability.',
-      'Automated testing and validation tooling to reduce manual intervention.',
-      'Refactored legacy code, reducing technical debt and accelerating future development.',
-      'Used internal and external REST APIs with a focus on scalability and performance.',
-      'Authored operational documentation and best-practice guides for the team.',
-    ],
-  },
-  {
-    role:     'Backend Engineer',
-    company:  'Onestock',
-    location: 'Toulouse, France',
-    period:   'Oct 2020 – Oct 2023',
-    featured: true,
-    bullets: [
-      'Designed and developed features for an Order Management System (OMS) SaaS product.',
-      'Implemented and maintained RESTful API endpoints for data access and manipulation.',
-      'Integrated third-party APIs using JSON and XML formats.',
-      'Led feasibility studies and translated client requirements into technical solutions.',
-      'Implemented validation tests and improved existing software applications.',
-    ],
-  },
-  {
-    role:     'Full Stack Developer Intern',
-    company:  'Onestock',
-    location: 'Toulouse, France',
-    period:   'May 2020 – Sep 2020',
-    featured: false,
-    bullets: [
-      'Designed and developed web modules for internal projects.',
-      'Analysed and qualified client requirements.',
-      'Conducted code reviews and resolved bugs in existing applications.',
-    ],
-  },
-  {
-    role:     'HVAC Maintenance Technician',
-    company:  'Igienair',
-    location: 'Montpellier, France',
-    period:   'May 2019 – Aug 2019',
-    featured: false,
-    bullets: [
-      'Preventive and corrective maintenance on HVAC systems.',
-      'Installed new air handling units and diagnosed system malfunctions.',
-    ],
-  },
-  {
-    role:     'Warehouse Order Picker',
-    company:  'Manpower',
-    location: 'Montpellier, France',
-    period:   'May 2018 – Aug 2018',
-    featured: false,
-    bullets: [
-      'Order picking, inventory management and dispatch staging in a fast-paced environment.',
-      'Operated forklifts (LO) and pallet jacks in compliance with WHS standards.',
-    ],
-  },
-]
+const jobs = computed(() => tm('experience.jobs'))
+const featuredIndices = new Set([1, 2])
 </script>
 
 <style scoped>

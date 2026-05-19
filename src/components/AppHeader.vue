@@ -15,7 +15,7 @@
       <div class="header__controls">
         <button
           class="header__toggle"
-          :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+          :aria-label="theme === 'dark' ? t('header.aria_theme_dark') : t('header.aria_theme_light')"
           @click="toggleTheme"
         >
           <span v-if="theme === 'dark'">☀</span>
@@ -24,7 +24,7 @@
 
         <button
           class="header__toggle"
-          :aria-label="locale === 'en' ? 'Passer en français' : 'Switch to English'"
+          :aria-label="locale === 'en' ? t('header.aria_lang_en') : t('header.aria_lang_fr')"
           @click="toggleLocale"
         >
           <span class="header__lang">{{ locale === 'en' ? 'FR' : 'EN' }}</span>
@@ -35,6 +35,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { useTheme } from '../composables/useTheme.js'
 import { useI18n } from 'vue-i18n'
 
@@ -49,13 +50,13 @@ function toggleLocale() {
   localStorage.setItem(LOCALE_KEY, next)
 }
 
-const navLinks = [
+const navLinks = computed(() => [
   { href: '#about',      label: t('nav.about') },
   { href: '#experience', label: t('nav.experience') },
   { href: '#skills',     label: t('nav.skills') },
   { href: '#education',  label: t('nav.education') },
   { href: '#contact',    label: t('nav.contact') },
-]
+])
 </script>
 
 <style scoped>

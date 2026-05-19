@@ -1,8 +1,8 @@
 <template>
   <section id="skills" class="skills">
     <div ref="revealEl" class="container reveal">
-      <p class="section-label">03 // skills</p>
-      <h2 class="section-title">Skills</h2>
+      <p class="section-label">{{ t('skills.label') }}</p>
+      <h2 class="section-title">{{ t('skills.title') }}</h2>
       <div class="section-divider"></div>
 
       <div class="skills__grid">
@@ -20,39 +20,15 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
+const { t, tm } = useI18n()
 const revealEl = ref(null)
 useScrollReveal(revealEl)
 
-const skillGroups = [
-  {
-    title: 'Languages',
-    items: ['Python', 'JavaScript', 'SQL', 'MongoDB', 'OOP'],
-  },
-  {
-    title: 'APIs & Tools',
-    items: ['RESTful APIs', 'Postman', 'Docker', 'Git', 'Datadog', 'Jira'],
-  },
-  {
-    title: 'Practices',
-    items: [
-      'SaaS Monitoring',
-      'Microservices',
-      'Backend Development',
-      'Log Analysis',
-      'Testing & Debugging',
-      'Agile / Scrum',
-      'Kanban',
-      'Automation Testing',
-    ],
-  },
-  {
-    title: 'Platforms & OS',
-    items: ['Linux', 'Windows', 'E-commerce / OMS'],
-  },
-]
+const skillGroups = computed(() => tm('skills.groups'))
 </script>
 
 <style scoped>

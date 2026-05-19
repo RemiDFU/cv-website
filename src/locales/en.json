@@ -5,5 +5,208 @@
     "skills":     "Skills",
     "education":  "Education",
     "contact":    "Contact"
+  },
+
+  "header": {
+    "aria_theme_dark":  "Switch to light mode",
+    "aria_theme_light": "Switch to dark mode",
+    "aria_lang_en":     "Passer en français",
+    "aria_lang_fr":     "Switch to English"
+  },
+
+  "hero": {
+    "pre":          "~/adelaide $",
+    "title":        "Site Reliability Engineer",
+    "summary":      "Software engineer with 5+ years in backend development, SaaS platform monitoring, and reliability engineering. Skilled at maintaining scalable systems and ensuring high availability for critical applications — now based in Adelaide, SA.",
+    "cta_contact":  "Get in touch",
+    "cta_work":     "View my work",
+    "meta_location":"Adelaide, SA 5000",
+    "meta_visa":    "Working Holiday Visa 417",
+    "meta_lang":    "FR / EN C1",
+    "scroll_label": "Scroll to about"
+  },
+
+  "about": {
+    "label":  "01 // about",
+    "title":  "About Me",
+    "p1":     "I'm a software engineer with five years of hands-on experience in backend development, SaaS platform monitoring, and site reliability engineering — primarily within the retail and e-commerce space.",
+    "p2":     "At Onestock I grew from intern to SRE, working across an Order Management System used by major European retailers. I built and maintained RESTful APIs, refactored legacy code, automated validation tooling, and developed monitoring solutions that kept production reliable for thousands of concurrent users.",
+    "p3":     "I thrive in agile, collaborative environments and enjoy the intersection of engineering rigour and practical problem-solving. I'm now based in Adelaide on a Working Holiday Visa (subclass 417) and actively looking for my next challenge in South Australia.",
+    "linkedin":"LinkedIn ↗",
+    "github":  "GitHub ↗",
+    "facts": [
+      { "label": "Location",   "value": "Adelaide, SA 5000" },
+      { "label": "Visa",       "value": "Working Holiday 417" },
+      { "label": "Experience", "value": "5+ years" },
+      { "label": "Languages",  "value": "French (native) · English C1" },
+      { "label": "TOEIC",      "value": "975 / 990" },
+      { "label": "Interests",  "value": "Tech · Sports · Reading · History" }
+    ]
+  },
+
+  "experience": {
+    "label": "02 // experience",
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "role":    "Warehouse Operator",
+        "company": "Torresan Estate",
+        "location":"Woodside, SA",
+        "period":  "Jan 2026 – Present",
+        "bullets": [
+          "Inventory tracking using a Warehouse Management System (WMS).",
+          "Forklift operations and heavy machinery handling.",
+          "Applied WHS legislation to maintain a safe working environment."
+        ]
+      },
+      {
+        "role":    "Site Reliability Engineer",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "Nov 2023 – Jul 2025",
+        "bullets": [
+          "Monitored the integration layer of a large-scale SaaS e-commerce (OMS) solution.",
+          "Developed and implemented monitoring solutions to improve system reliability.",
+          "Automated testing and validation tooling to reduce manual intervention.",
+          "Refactored legacy code, reducing technical debt and accelerating future development.",
+          "Used internal and external REST APIs with a focus on scalability and performance.",
+          "Authored operational documentation and best-practice guides for the team."
+        ]
+      },
+      {
+        "role":    "Backend Engineer",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "Oct 2020 – Oct 2023",
+        "bullets": [
+          "Designed and developed features for an Order Management System (OMS) SaaS product.",
+          "Implemented and maintained RESTful API endpoints for data access and manipulation.",
+          "Integrated third-party APIs using JSON and XML formats.",
+          "Led feasibility studies and translated client requirements into technical solutions.",
+          "Implemented validation tests and improved existing software applications."
+        ]
+      },
+      {
+        "role":    "Full Stack Developer Intern",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "May 2020 – Sep 2020",
+        "bullets": [
+          "Designed and developed web modules for internal projects.",
+          "Analysed and qualified client requirements.",
+          "Conducted code reviews and resolved bugs in existing applications."
+        ]
+      },
+      {
+        "role":    "HVAC Maintenance Technician",
+        "company": "Igienair",
+        "location":"Montpellier, France",
+        "period":  "May 2019 – Aug 2019",
+        "bullets": [
+          "Preventive and corrective maintenance on HVAC systems.",
+          "Installed new air handling units and diagnosed system malfunctions."
+        ]
+      },
+      {
+        "role":    "Warehouse Order Picker",
+        "company": "Manpower",
+        "location":"Montpellier, France",
+        "period":  "May 2018 – Aug 2018",
+        "bullets": [
+          "Order picking, inventory management and dispatch staging in a fast-paced environment.",
+          "Operated forklifts (LO) and pallet jacks in compliance with WHS standards."
+        ]
+      }
+    ]
+  },
+
+  "skills": {
+    "label": "03 // skills",
+    "title": "Skills",
+    "groups": [
+      {
+        "title": "Languages",
+        "items": ["Python", "JavaScript", "SQL", "MongoDB", "OOP"]
+      },
+      {
+        "title": "APIs & Tools",
+        "items": ["RESTful APIs", "Postman", "Docker", "Git", "Datadog", "Jira"]
+      },
+      {
+        "title": "Practices",
+        "items": ["SaaS Monitoring", "Microservices", "Backend Development", "Log Analysis", "Testing & Debugging", "Agile / Scrum", "Kanban", "Automation Testing"]
+      },
+      {
+        "title": "Platforms & OS",
+        "items": ["Linux", "Windows", "E-commerce / OMS"]
+      }
+    ]
+  },
+
+  "education": {
+    "label":               "04 // education",
+    "title":               "Education",
+    "certifications_title":"Certifications",
+    "issued":              "Issued",
+    "degrees": [
+      {
+        "type":     "Master of Science",
+        "field":    "Engineering in Computer Science",
+        "school":   "Conservatoire National Des Arts Et Métiers",
+        "location": "Toulouse, France",
+        "year":     "2023"
+      },
+      {
+        "type":     "Bachelor of Science",
+        "field":    "Computer Science",
+        "school":   "IPST-CNAM Toulouse INP",
+        "location": "Toulouse, France",
+        "year":     "2021"
+      },
+      {
+        "type":     "Associate Degree",
+        "field":    "Computer Science",
+        "school":   "Université Toulouse III Paul Sabatier",
+        "location": "Toulouse, France",
+        "year":     "2020"
+      }
+    ],
+    "certifications": [
+      { "name": "TOEIC Score 975/990",               "issued": "Aug 2023" },
+      { "name": "White Card CPCWHS1001",              "issued": "Nov 2025" },
+      { "name": "Provide First Aid & CPR HLTAID011", "issued": "Nov 2025" },
+      { "name": "Forklift Licence TLILIC0003",        "issued": "Jan 2026" }
+    ]
+  },
+
+  "contact": {
+    "label": "05 // contact",
+    "title": "Get In Touch",
+    "intro": "I'm currently open to new opportunities in Adelaide or remote roles. Whether you have a position in mind or just want to connect, feel free to reach out — I'll get back to you promptly.",
+    "form": {
+      "name_label":       "Name",
+      "name_placeholder": "Your name",
+      "email_label":       "Email",
+      "email_placeholder": "you@example.com",
+      "message_label":     "Message",
+      "message_placeholder":"Tell me about the role or project…",
+      "submit":            "Send Message",
+      "sending":           "Sending…",
+      "error_global":      "Something went wrong. Please try emailing me directly."
+    },
+    "success": {
+      "title": "Message sent!",
+      "body":  "Thanks for reaching out. I'll reply as soon as possible.",
+      "reset": "Send another"
+    },
+    "validation": {
+      "name":    "Please enter your name.",
+      "email":   "Please enter a valid email address.",
+      "message": "Message must be at least 10 characters."
+    }
+  },
+
+  "footer": {
+    "built": "Built with Vue 3 + Vite"
   }
 }

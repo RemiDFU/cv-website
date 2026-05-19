@@ -5,5 +5,208 @@
     "skills":     "Compétences",
     "education":  "Formation",
     "contact":    "Contact"
+  },
+
+  "header": {
+    "aria_theme_dark":  "Passer en mode clair",
+    "aria_theme_light": "Passer en mode sombre",
+    "aria_lang_en":     "Passer en français",
+    "aria_lang_fr":     "Switch to English"
+  },
+
+  "hero": {
+    "pre":          "~/adelaide $",
+    "title":        "Ingénieur en Fiabilité des Sites",
+    "summary":      "Ingénieur logiciel avec plus de 5 ans d'expérience en développement backend, surveillance de plateformes SaaS et ingénierie de fiabilité. Spécialisé dans les systèmes scalables et la haute disponibilité des applications critiques — désormais basé à Adélaïde, SA.",
+    "cta_contact":  "Me contacter",
+    "cta_work":     "Voir mon parcours",
+    "meta_location":"Adélaïde, SA 5000",
+    "meta_visa":    "Visa Vacances-Travail 417",
+    "meta_lang":    "FR / EN C1",
+    "scroll_label": "Défiler vers À propos"
+  },
+
+  "about": {
+    "label":  "01 // à propos",
+    "title":  "À propos",
+    "p1":     "Je suis ingénieur logiciel avec cinq ans d'expérience pratique en développement backend, surveillance de plateformes SaaS et ingénierie de fiabilité des sites — principalement dans le secteur du retail et du commerce en ligne.",
+    "p2":     "Chez Onestock, j'ai progressé du poste de stagiaire à celui d'ingénieur SRE, en travaillant sur un Système de Gestion de Commandes (OMS) utilisé par de grands retailers européens. J'ai conçu et maintenu des APIs RESTful, refactorisé du code existant, automatisé les outils de validation et développé des solutions de monitoring assurant la fiabilité de la production pour des milliers d'utilisateurs simultanés.",
+    "p3":     "J'évolue avec aisance dans des environnements agiles et collaboratifs, à l'intersection de la rigueur technique et de la résolution pragmatique de problèmes. Je suis désormais basé à Adélaïde avec un Visa Vacances-Travail (sous-classe 417) et je recherche activement de nouveaux défis en Australie-Méridionale.",
+    "linkedin":"LinkedIn ↗",
+    "github":  "GitHub ↗",
+    "facts": [
+      { "label": "Localisation", "value": "Adélaïde, SA 5000" },
+      { "label": "Visa",         "value": "Vacances-Travail 417" },
+      { "label": "Expérience",   "value": "5+ ans" },
+      { "label": "Langues",      "value": "Français (natif) · Anglais C1" },
+      { "label": "TOEIC",        "value": "975 / 990" },
+      { "label": "Loisirs",      "value": "Tech · Sport · Lecture · Histoire" }
+    ]
+  },
+
+  "experience": {
+    "label": "02 // expérience",
+    "title": "Expérience professionnelle",
+    "jobs": [
+      {
+        "role":    "Opérateur en entrepôt",
+        "company": "Torresan Estate",
+        "location":"Woodside, SA",
+        "period":  "Janv. 2026 – Présent",
+        "bullets": [
+          "Suivi des stocks via un Système de Gestion d'Entrepôt (WMS).",
+          "Conduite de chariot élévateur et utilisation de machines lourdes.",
+          "Application de la législation WHS pour maintenir un environnement de travail sûr."
+        ]
+      },
+      {
+        "role":    "Ingénieur en Fiabilité des Sites (SRE)",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "Nov. 2023 – Juil. 2025",
+        "bullets": [
+          "Surveillance de la couche d'intégration d'une solution SaaS e-commerce (OMS) à grande échelle.",
+          "Développement et mise en place de solutions de monitoring pour améliorer la fiabilité des systèmes.",
+          "Automatisation des outils de tests et de validation pour réduire les interventions manuelles.",
+          "Refactorisation du code existant, réduction de la dette technique et accélération du développement futur.",
+          "Utilisation des APIs REST internes et externes avec un focus sur la scalabilité et la performance.",
+          "Rédaction de la documentation opérationnelle et des guides de bonnes pratiques pour l'équipe."
+        ]
+      },
+      {
+        "role":    "Ingénieur Backend",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "Oct. 2020 – Oct. 2023",
+        "bullets": [
+          "Conception et développement de fonctionnalités pour un produit SaaS de gestion de commandes (OMS).",
+          "Implémentation et maintenance des endpoints d'API RESTful pour l'accès et la manipulation des données.",
+          "Intégration d'APIs tierces via des formats JSON et XML.",
+          "Réalisation d'études de faisabilité et traduction des besoins clients en solutions techniques.",
+          "Mise en œuvre de tests de validation et amélioration des applications logicielles existantes."
+        ]
+      },
+      {
+        "role":    "Stagiaire Développeur Full Stack",
+        "company": "Onestock",
+        "location":"Toulouse, France",
+        "period":  "Mai 2020 – Sept. 2020",
+        "bullets": [
+          "Conception et développement de modules web pour des projets internes.",
+          "Analyse et qualification des besoins clients.",
+          "Revues de code et résolution de bugs dans les applications existantes."
+        ]
+      },
+      {
+        "role":    "Technicien de Maintenance CVC",
+        "company": "Igienair",
+        "location":"Montpellier, France",
+        "period":  "Mai 2019 – Août 2019",
+        "bullets": [
+          "Maintenance préventive et corrective des systèmes de chauffage, ventilation et climatisation.",
+          "Installation de nouvelles unités de traitement d'air et diagnostic des pannes."
+        ]
+      },
+      {
+        "role":    "Préparateur de Commandes",
+        "company": "Manpower",
+        "location":"Montpellier, France",
+        "period":  "Mai 2018 – Août 2018",
+        "bullets": [
+          "Préparation de commandes, gestion des stocks et préparation à l'expédition dans un environnement dynamique.",
+          "Conduite de chariots élévateurs (LO) et de transpalettes dans le respect des normes WHS."
+        ]
+      }
+    ]
+  },
+
+  "skills": {
+    "label": "03 // compétences",
+    "title": "Compétences",
+    "groups": [
+      {
+        "title": "Langages",
+        "items": ["Python", "JavaScript", "SQL", "MongoDB", "POO"]
+      },
+      {
+        "title": "APIs & Outils",
+        "items": ["APIs RESTful", "Postman", "Docker", "Git", "Datadog", "Jira"]
+      },
+      {
+        "title": "Pratiques",
+        "items": ["Monitoring SaaS", "Microservices", "Développement Backend", "Analyse de logs", "Tests & Débogage", "Agile / Scrum", "Kanban", "Tests automatisés"]
+      },
+      {
+        "title": "Plateformes & OS",
+        "items": ["Linux", "Windows", "E-commerce / OMS"]
+      }
+    ]
+  },
+
+  "education": {
+    "label":               "04 // formation",
+    "title":               "Formation",
+    "certifications_title":"Certifications",
+    "issued":              "Délivré en",
+    "degrees": [
+      {
+        "type":     "Master",
+        "field":    "Ingénierie Informatique",
+        "school":   "Conservatoire National Des Arts Et Métiers",
+        "location": "Toulouse, France",
+        "year":     "2023"
+      },
+      {
+        "type":     "Licence",
+        "field":    "Informatique",
+        "school":   "IPST-CNAM Toulouse INP",
+        "location": "Toulouse, France",
+        "year":     "2021"
+      },
+      {
+        "type":     "DUT",
+        "field":    "Informatique",
+        "school":   "Université Toulouse III Paul Sabatier",
+        "location": "Toulouse, France",
+        "year":     "2020"
+      }
+    ],
+    "certifications": [
+      { "name": "TOEIC Score 975/990",               "issued": "Août 2023" },
+      { "name": "White Card CPCWHS1001",              "issued": "Nov. 2025" },
+      { "name": "Premiers secours & RCP HLTAID011",  "issued": "Nov. 2025" },
+      { "name": "Licence chariot élévateur TLILIC0003","issued": "Janv. 2026" }
+    ]
+  },
+
+  "contact": {
+    "label": "05 // contact",
+    "title": "Me contacter",
+    "intro": "Je suis actuellement disponible pour de nouvelles opportunités à Adélaïde ou en télétravail. Que vous ayez un poste à proposer ou simplement envie d'échanger, n'hésitez pas — je vous répondrai rapidement.",
+    "form": {
+      "name_label":        "Nom",
+      "name_placeholder":  "Votre nom",
+      "email_label":       "E-mail",
+      "email_placeholder": "vous@exemple.com",
+      "message_label":     "Message",
+      "message_placeholder":"Parlez-moi du poste ou du projet…",
+      "submit":            "Envoyer",
+      "sending":           "Envoi en cours…",
+      "error_global":      "Une erreur est survenue. Veuillez m'envoyer un e-mail directement."
+    },
+    "success": {
+      "title": "Message envoyé !",
+      "body":  "Merci de m'avoir contacté. Je vous répondrai dès que possible.",
+      "reset": "Envoyer un autre message"
+    },
+    "validation": {
+      "name":    "Veuillez saisir votre nom.",
+      "email":   "Veuillez saisir une adresse e-mail valide.",
+      "message": "Le message doit comporter au moins 10 caractères."
+    }
+  },
+
+  "footer": {
+    "built": "Développé avec Vue 3 + Vite"
   }
 }

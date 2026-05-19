@@ -7,7 +7,7 @@
 
     <div class="container hero__content">
       <p class="hero__pre">
-        <span class="hero__prompt">~/adelaide $</span>
+        <span class="hero__prompt">{{ t('hero.pre') }}</span>
         <span class="hero__cursor" aria-hidden="true"></span>
       </p>
 
@@ -15,41 +15,39 @@
 
       <p class="hero__title">
         <span class="hero__title-bracket">&lt;</span>
-        Site Reliability Engineer
+        {{ t('hero.title') }}
         <span class="hero__title-bracket">/&gt;</span>
       </p>
 
-      <p class="hero__summary">
-        Software engineer with 5+ years in backend development, SaaS platform monitoring,
-        and reliability engineering. Skilled at maintaining scalable systems and ensuring
-        high availability for critical applications — now based in Adelaide, SA.
-      </p>
+      <p class="hero__summary">{{ t('hero.summary') }}</p>
 
       <div class="hero__ctas">
-        <a href="#contact" class="btn btn--primary">Get in touch</a>
-        <a href="#experience" class="btn btn--ghost">View my work</a>
+        <a href="#contact" class="btn btn--primary">{{ t('hero.cta_contact') }}</a>
+        <a href="#experience" class="btn btn--ghost">{{ t('hero.cta_work') }}</a>
       </div>
 
       <div class="hero__meta">
         <span class="hero__meta-item">
-          <span class="hero__meta-icon">📍</span> Adelaide, SA 5000
+          <span class="hero__meta-icon">📍</span> {{ t('hero.meta_location') }}
         </span>
         <span class="hero__meta-item">
-          <span class="hero__meta-icon">🛂</span> Working Holiday Visa 417
+          <span class="hero__meta-icon">🛂</span> {{ t('hero.meta_visa') }}
         </span>
         <span class="hero__meta-item">
-          <span class="hero__meta-icon">🌐</span> FR / EN C1
+          <span class="hero__meta-icon">🌐</span> {{ t('hero.meta_lang') }}
         </span>
       </div>
     </div>
 
-    <a href="#about" class="hero__scroll" aria-label="Scroll to about">
+    <a href="#about" class="hero__scroll" :aria-label="t('hero.scroll_label')">
       <span class="hero__scroll-arrow"></span>
     </a>
   </section>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 </script>
 
 <style scoped>

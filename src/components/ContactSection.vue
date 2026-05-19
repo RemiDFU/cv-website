@@ -1,18 +1,14 @@
 <template>
   <section id="contact" class="contact">
     <div ref="revealEl" class="container reveal">
-      <p class="section-label">05 // contact</p>
-      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-label">{{ t('contact.label') }}</p>
+      <h2 class="section-title">{{ t('contact.title') }}</h2>
       <div class="section-divider"></div>
 
       <div class="contact__grid">
         <!-- Info -->
         <div class="contact__info">
-          <p class="contact__intro">
-            I'm currently open to new opportunities in Adelaide or remote roles.
-            Whether you have a position in mind or just want to connect, feel
-            free to reach out — I'll get back to you promptly.
-          </p>
+          <p class="contact__intro">{{ t('contact.intro') }}</p>
 
           <div class="contact__details">
             <a href="mailto:remi.dufau.au@gmail.com" class="contact__detail">
@@ -53,13 +49,13 @@
             @submit.prevent="handleSubmit"
           >
             <div class="form__field" :class="{ 'form__field--error': errors.name }">
-              <label for="contact-name" class="form__label">Name</label>
+              <label for="contact-name" class="form__label">{{ t('contact.form.name_label') }}</label>
               <input
                 id="contact-name"
                 v-model.trim="form.name"
                 type="text"
                 class="form__input"
-                placeholder="Your name"
+                :placeholder="t('contact.form.name_placeholder')"
                 autocomplete="name"
                 @blur="validateField('name')"
               />
@@ -67,13 +63,13 @@
             </div>
 
             <div class="form__field" :class="{ 'form__field--error': errors.email }">
-              <label for="contact-email" class="form__label">Email</label>
+              <label for="contact-email" class="form__label">{{ t('contact.form.email_label') }}</label>
               <input
                 id="contact-email"
                 v-model.trim="form.email"
                 type="email"
                 class="form__input"
-                placeholder="you@example.com"
+                :placeholder="t('contact.form.email_placeholder')"
                 autocomplete="email"
                 @blur="validateField('email')"
               />
@@ -81,12 +77,12 @@
             </div>
 
             <div class="form__field" :class="{ 'form__field--error': errors.message }">
-              <label for="contact-message" class="form__label">Message</label>
+              <label for="contact-message" class="form__label">{{ t('contact.form.message_label') }}</label>
               <textarea
                 id="contact-message"
                 v-model.trim="form.message"
                 class="form__input form__textarea"
-                placeholder="Tell me about the role or project…"
+                :placeholder="t('contact.form.message_placeholder')"
                 rows="5"
                 @blur="validateField('message')"
               ></textarea>
@@ -96,17 +92,17 @@
             <p v-if="submitError" class="form__error form__error--global">{{ submitError }}</p>
 
             <button type="submit" class="btn btn--primary form__submit" :disabled="sending">
-              <span v-if="sending">Sending…</span>
-              <span v-else>Send Message</span>
+              <span v-if="sending">{{ t('contact.form.sending') }}</span>
+              <span v-else>{{ t('contact.form.submit') }}</span>
             </button>
           </form>
 
           <!-- Success state -->
           <div v-else class="contact__success">
             <span class="contact__success-icon" aria-hidden="true">✓</span>
-            <h3>Message sent!</h3>
-            <p>Thanks for reaching out. I'll reply as soon as possible.</p>
-            <button class="btn btn--ghost" @click="reset">Send another</button>
+            <h3>{{ t('contact.success.title') }}</h3>
+            <p>{{ t('contact.success.body') }}</p>
+            <button class="btn btn--ghost" @click="reset">{{ t('contact.success.reset') }}</button>
           </div>
         </div>
       </div>
@@ -116,8 +112,10 @@
 
 <script setup>
 import { reactive, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useScrollReveal } from '../composables/useScrollReveal.js'
 
+const { t } = useI18n()
 const revealEl = ref(null)
 useScrollReveal(revealEl)
 
@@ -131,13 +129,13 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 function validateField(field) {
   if (field === 'name') {
-    errors.name = form.name.length >= 2 ? '' : 'Please enter your name.'
+    errors.name = form.name.length >= 2 ? '' : t('contact.validation.name')
   }
   if (field === 'email') {
-    errors.email = EMAIL_RE.test(form.email) ? '' : 'Please enter a valid email address.'
+    errors.email = EMAIL_RE.test(form.email) ? '' : t('contact.validation.email')
   }
   if (field === 'message') {
-    errors.message = form.message.length >= 10 ? '' : 'Message must be at least 10 characters.'
+    errors.message = form.message.length >= 10 ? '' : t('contact.validation.message')
   }
 }
 
@@ -160,7 +158,7 @@ async function handleSubmit() {
     })
     submitted.value = true
   } catch {
-    submitError.value = 'Something went wrong. Please try emailing me directly.'
+    submitError.value = t('contact.form.error_global')
   } finally {
     sending.value = false
   }

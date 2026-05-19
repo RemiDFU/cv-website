@@ -11,13 +11,16 @@
   <footer class="site-footer">
     <p class="site-footer__text">
       <span class="site-footer__mono">Remi Dufau</span> · Adelaide, SA ·
-      Built with Vue 3 + Vite
+      {{ t('footer.built') }}
     </p>
   </footer>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
 import AppHeader       from './components/AppHeader.vue'
+
+const { t } = useI18n()
 import HeroSection     from './components/HeroSection.vue'
 import AboutSection    from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'

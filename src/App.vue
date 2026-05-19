@@ -1,8 +1,10 @@
 <template>
-  <div id="app">
+  <AppHeader />
+  <main>
     <!-- Sections will be added in Phase 3 -->
-  </div>
+  </main>
 </template>
 
 <script setup>
+import AppHeader from './components/AppHeader.vue'
 </script>

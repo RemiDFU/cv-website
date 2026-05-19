@@ -1,1 +1,9 @@
-{}
+{
+  "nav": {
+    "about":      "About",
+    "experience": "Experience",
+    "skills":     "Skills",
+    "education":  "Education",
+    "contact":    "Contact"
+  }
+}

@@ -152,7 +152,7 @@
       },
       {
         "title": "APIs & Tools",
-        "items": ["RESTful APIs", "Postman", "Docker", "Git", "Datadog", "Jira"]
+        "items": ["RESTful APIs", "FastAPI", "n8n", "Postman", "Docker", "Git", "Datadog", "Jira"]
       },
       {
         "title": "Practices",
@@ -160,7 +160,7 @@
       },
       {
         "title": "Platforms & OS",
-        "items": ["Linux", "Windows", "E-commerce / OMS"]
+        "items": ["Linux", "Windows", "Shopify", "E-commerce / OMS"]
       }
     ]
   },

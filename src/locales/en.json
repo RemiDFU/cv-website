@@ -2,6 +2,7 @@
   "nav": {
     "about":      "About",
     "experience": "Experience",
+    "projects":   "Projects",
     "skills":     "Skills",
     "education":  "Education",
     "contact":    "Contact"
@@ -120,8 +121,29 @@
     ]
   },
 
+  "projects": {
+    "label": "03 // projects",
+    "title": "Personal Projects",
+    "items": [
+      {
+        "name":    "OpSync — Shopify · 3PL · Xero Reconciliation Bot",
+        "period":  "May 2026",
+        "url":     "https://github.com/RemiDFU/shopify-3pl-xero-reconciler",
+        "summary": "Automated financial reconciliation engine that cross-references three business platforms, flags discrepancies, and emails a daily report — built end-to-end in Python with Docker and n8n.",
+        "bullets": [
+          "Designed a 5-check reconciliation engine across Shopify, Shippit (3PL), and Xero — detecting shipped-but-not-invoiced orders, quantity mismatches, price variances, and refund gaps with zero manual intervention.",
+          "Solved a real Shippit API limitation (no list-orders endpoint) by deriving fulfilment data from Shopify write-backs instead, keeping the integration clean and credential-free.",
+          "Built a paginated Shopify Admin REST client, Xero OAuth2 client, and Jinja2 HTML report renderer — each independently toggleable between live and mock mode for isolated testing.",
+          "Orchestrated the pipeline with n8n: daily 7 AM cron → POST /reconcile → conditional email alert if discrepancies found, via Mailpit in dev.",
+          "Containerised the full stack (FastAPI + n8n + Mailpit) with Docker Compose; mock dataset of 20 orders carries 6 deliberate discrepancies totalling $557.94 AUD to validate detection accuracy."
+        ],
+        "stack": ["Python 3.11", "FastAPI", "Docker Compose", "n8n", "Pydantic v2", "Jinja2", "REST APIs"]
+      }
+    ]
+  },
+
   "skills": {
-    "label": "03 // skills",
+    "label": "04 // skills",
     "title": "Skills",
     "groups": [
       {
@@ -144,7 +166,7 @@
   },
 
   "education": {
-    "label":               "04 // education",
+    "label":               "05 // education",
     "title":               "Education",
     "certifications_title":"Certifications",
     "issued":              "Issued",
@@ -180,7 +202,7 @@
   },
 
   "contact": {
-    "label": "05 // contact",
+    "label": "06 // contact",
     "title": "Get In Touch",
     "intro": "I'm currently open to new opportunities in Adelaide or remote roles. Whether you have a position in mind or just want to connect, feel free to reach out — I'll get back to you promptly.",
     "form": {

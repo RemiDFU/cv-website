@@ -4,6 +4,7 @@
     <HeroSection />
     <AboutSection />
     <ExperienceSection />
+    <ProjectsSection />
     <SkillsSection />
     <EducationSection />
     <ContactSection />
@@ -24,6 +25,7 @@ const { t } = useI18n()
 import HeroSection     from './components/HeroSection.vue'
 import AboutSection    from './components/AboutSection.vue'
 import ExperienceSection from './components/ExperienceSection.vue'
+import ProjectsSection  from './components/ProjectsSection.vue'
 import SkillsSection   from './components/SkillsSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import ContactSection  from './components/ContactSection.vue'

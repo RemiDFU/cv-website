@@ -2,6 +2,7 @@
   "nav": {
     "about":      "À propos",
     "experience": "Expérience",
+    "projects":   "Projets",
     "skills":     "Compétences",
     "education":  "Formation",
     "contact":    "Contact"
@@ -120,8 +121,29 @@
     ]
   },
 
+  "projects": {
+    "label": "03 // projets",
+    "title": "Projets personnels",
+    "items": [
+      {
+        "name":    "OpSync — Bot de Réconciliation Shopify · 3PL · Xero",
+        "period":  "Mai 2026",
+        "url":     "https://github.com/RemiDFU/shopify-3pl-xero-reconciler",
+        "summary": "Moteur de réconciliation financière automatisé croisant trois plateformes métier, détectant les écarts et envoyant un rapport quotidien par e-mail — développé de bout en bout en Python avec Docker et n8n.",
+        "bullets": [
+          "Conçu un moteur de réconciliation en 5 vérifications croisant Shopify, Shippit (3PL) et Xero — détectant les commandes expédiées non facturées, les écarts de quantité, les divergences de prix et les manques de remboursement, sans intervention manuelle.",
+          "Résolu une limitation réelle de l'API Shippit (absence d'endpoint de liste des commandes) en dérivant les données de livraison depuis les écritures de retour Shopify, maintenant l'intégration propre et sans credentials supplémentaires.",
+          "Développé un client REST paginé pour l'API Admin Shopify, un client OAuth2 Xero et un générateur de rapports HTML Jinja2 — chaque source commutable indépendamment entre mode réel et mock pour des tests isolés.",
+          "Orchestré le pipeline avec n8n : cron quotidien à 7h → POST /reconcile → alerte e-mail conditionnelle si des écarts sont détectés, via Mailpit en développement.",
+          "Stack entière conteneurisée (FastAPI + n8n + Mailpit) avec Docker Compose ; jeu de données mock de 20 commandes avec 6 écarts délibérés totalisant 557,94 AUD$ pour valider la précision de détection."
+        ],
+        "stack": ["Python 3.11", "FastAPI", "Docker Compose", "n8n", "Pydantic v2", "Jinja2", "APIs REST"]
+      }
+    ]
+  },
+
   "skills": {
-    "label": "03 // compétences",
+    "label": "04 // compétences",
     "title": "Compétences",
     "groups": [
       {
@@ -144,7 +166,7 @@
   },
 
   "education": {
-    "label":               "04 // formation",
+    "label":               "05 // formation",
     "title":               "Formation",
     "certifications_title":"Certifications",
     "issued":              "Délivré en",
@@ -180,7 +202,7 @@
   },
 
   "contact": {
-    "label": "05 // contact",
+    "label": "06 // contact",
     "title": "Me contacter",
     "intro": "Je suis actuellement disponible pour de nouvelles opportunités à Adélaïde ou en télétravail. Que vous ayez un poste à proposer ou simplement envie d'échanger, n'hésitez pas — je vous répondrai rapidement.",
     "form": {
